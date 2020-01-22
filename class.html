@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+   <div id="demo"></div>
+  
+    <script type="text/babel">
+function Hello(data){
+    return(
+    <MyAge name={data.name} roll="4919853" age="20" />
+    );
+}
+class MyAge extends React.Component{
+    render(){
+        var test = this.props ;
+        return(
+        <h1>My Age is:{test.age}.Name is:{test.name}.Roll is:{test.roll}</h1>
+        );
+    }
+}
+      ReactDOM.render(
+          <div>
+             
+             <Hello name="Md Shafiqul Islam"  />
+             
+          </div>
+        ,
+          document.getElementById("demo")
+      );
+     </script>
+   
+  </body>
+</html>
