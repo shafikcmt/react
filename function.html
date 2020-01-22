@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    function Student(data){
+        return(
+        <div>
+            <h1>Name:{data.name}</h1>
+            <h1>Age:{data.age}</h1>
+            <Roll roll={data.roll} />
+        </div>
+        );
+    }
+function Roll(roll){
+    return(
+    <h1>Roll is:{roll.roll}</h1>
+    );
+}
+
+      ReactDOM.render(
+          <div>
+            <Student name="Md Shafiqul Islam" age="20" roll="4919853"/> 
+          </div>,
+        document.getElementById('root')
+      );
+
+    </script>
+   
+  </body>
+</html>
