@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+class ReactEvent extends React.Component{
+     edit(){
+        alert("Edit Button Clicked.")
+    }
+     delete(){
+        alert("Delete Button Clicked.")
+    }
+    render(){
+        var data = this.props;
+        return(
+            <div className="tem">
+              <h1 className="hh">{data.children}</h1>
+              <div class="action">
+              <button onClick={this.edit} className="edit">Edit</button>  
+              <button onClick={this.delete} className="delete">Delete</button>   
+              </div>
+               
+            </div>
+        
+        );
+    }
+}
+
+      ReactDOM.render(
+          <div>
+              <ReactEvent>Sofik</ReactEvent>
+              <ReactEvent>Rofik</ReactEvent>
+          </div>
+        ,
+        document.getElementById('root')
+      );
+
+    </script>
+   
+  </body>
+</html>
